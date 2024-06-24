@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.permit.io/permit.js"></script>
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginContainer">
+        <header>
+            <h1>Login to Debt Manager</h1>
+        </header>
+        <button id="adminBtn" onclick="login('admin')">Admin</button>
+        <button id="viewerBtn" onclick="login('viewer')" >Viewer</button>
+    </div>
+
+    <!-- Debt Manager Page -->
+    <div id="debtManagerContainer" style="display: none;">
+        <header>
+            <h1>Debt Manager</h1>
+        </header>
+        <div>
+            <h2 id="totalDebt1">Total Debt: ₹<span id="totalDebt">0</span></h2>
+        </div>
+        <form action="">
+            <input id="nameInput" type="text" placeholder="Enter the name">
+            <input id="amountInput" type="number" placeholder="Enter Amount">
+            <button id="addBtn" type="submit"><i class="fas fa-plus-circle"></i></button>
+        </form>
+        <div id="debtContainer">
+            <ul class="debt-list"></ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
