@@ -32,7 +32,7 @@ async function policyCheck(action) {
     };
 
     try {
-        const response = await fetch(OPAL_SERVER_URL,{mode:"no-cors"}, {
+        const response = await fetch(OPAL_SERVER_URL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

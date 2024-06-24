@@ -1,0 +1,35 @@
+package example.authz
+
+default allow = false
+
+allow {
+    input.role == "admin"
+    input.action == "add"
+}
+
+allow {
+    input.role == "admin"
+    input.action == "delete"
+}
+
+allow {
+    input.role == "admin"
+    input.action == "edit"
+}
+allow {
+    input.role == "viewer"
+    input.action == "add"
+    false
+}
+
+allow {
+    input.role == "viewer"
+    input.action == "delete"
+    false
+}
+
+allow {
+    input.role == "guest"
+    input.action == "edit"
+    false
+}
